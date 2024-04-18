@@ -1,0 +1,275 @@
+html{
+    height: 100%;
+    background: #fff;
+}
+
+body{
+    position: relative;
+    min-height: 100%;
+}
+
+.stripe{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;    
+}
+
+.container{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 10;
+  
+}
+
+#wolverine{
+    background: #ffd000;
+}
+
+#wolverine .container{
+    background: #fff;
+    border: 2px solid #e3ba02;
+}
+
+#wolverine .body{
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    background: #fdd835;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#wolverine .face{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #f0beaf;
+    border-radius: 100px;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    overflow: hidden;
+}
+
+#wolverine .fin {
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    background: #000;
+    z-index: 20;
+    top: 71px;
+}
+
+#wolverine .fin.one{
+    border-radius: 0 0 2px 90%;
+    left: 40px;
+    transform: rotate(25deg);
+}
+
+#wolverine .fin.two{
+    border-radius: 0 0 90% 2px;
+    right: 40px;
+    transform: rotate(-25deg);
+}
+#wolverine .fin-bridge{
+    position: absolute;
+    left: 50%;
+    background: #000;
+    transform: translateX(-50%);
+    height: 30px;
+    width: 34px;
+    top: 80px;
+    z-index: 20;
+}
+
+
+#wolverine .mask{
+    position: absolute;
+    height: 50px;
+    left: -10px;
+    right: -10px;
+    background: #fdd835; 
+}
+
+#wolverine .neck{
+    position: absolute;
+    z-index: 2;
+    width: 30px;
+    height: 50px;
+    background: #f0beaf;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+    border-radius: 12px;
+}
+
+#wolverine .eye{
+    position: absolute;
+    top: 85px;
+    width: 10px;
+    height: 20px;
+    background: #fff;
+    z-index: 100;
+    border-radius: 50%;
+}
+
+#wolverine .eye.one{
+    left: 70px;
+    transform: rotate(125deg);
+}
+
+#wolverine .eye.two{
+    right: 70px;
+    transform: rotate(-125deg);
+}
+
+#wolverine .mouth{
+    position: absolute;
+    background: #000;
+    width: 30px;
+    height: 10px;
+    border-radius: 0 0 100px 100px;
+    top: 56px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+}
+
+#wolverine .nose{
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   background: #fdd835;
+   width: 8px;
+   height: 8px;
+   top: 102px;
+   z-index: 30;
+   border-radius: 4px 4px 0 0;
+}
+
+
+#wolverine .stripes{
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    top: 40px;
+}
+
+#wolverine .stripes.left{
+   border-width: 10px 0 10px 40px;
+   border-color: transparent transparent transparent #424b54;
+   left: 0;
+}
+
+#wolverine .stripes.right{
+   border-width: 10px 40px 10px 0px;
+   border-color: transparent #424b54 transparent transparent ;
+   right: 0;
+}
+
+#wolverine .shoulder{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    z-index: 30;
+    top: 140px;
+}
+
+#wolverine .shoulder.left{
+   left: 30px;
+   border-width: 0 30px 80px 0;
+   border-color: transparent #00b7ff transparent transparent;
+}
+
+#wolverine .shoulder.right{
+   right: 30px;
+   border-width: 80px 30px 0 0;
+   border-color: #00b7ff transparent transparent transparent;
+}
+
+#wolverine .arm{
+position: absolute;
+z-index: 100;
+background: #f0beaf;
+width: 28px;
+height: 46px;
+bottom: 0;
+border-radius: 4px;
+}
+
+#wolverine .arm.left{
+    left: 40px;
+    transform: rotate(5deg);
+}
+#wolverine .arm.right{
+    right: 40px;
+    transform: rotate(-5deg);
+}
+#wolverine .claw{
+    position: absolute;
+    bottom: 36px;
+    height: 0;
+    width: 4px;
+    background: #cfd8dc;
+    animation-name: snikt;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+}
+
+#wolverine .claw:nth-child(1){
+    left: 4px;
+}
+
+#wolverine .claw:nth-child(2){
+    left: 50%;
+    margin-left: -2px;
+}
+#wolverine .claw:nth-child(3){
+    right: 4px;
+}
+
+#wolverine .arm.left .claw{
+   border-radius: 80% 0 0 0;
+}
+
+#wolverine .arm.right .claw{
+   border-radius:  0 80% 0 0;
+}
+
+@keyframes snikt {
+    0%{
+        height: 0;
+    }
+    10%{
+        height: 40px;
+    }
+    60%{
+        height: 40px;
+    }
+    70%{
+        height: 40px;
+    }
+    80%{
+        height: 0px;
+    }
+
+    100%{
+        height: 0px;
+    }
+}
